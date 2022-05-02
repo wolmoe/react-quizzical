@@ -1,38 +1,137 @@
-.App {
-  text-align: center;
+:root {
+    --primary: #6667AB;
+    --correct: #BDE4A7;
+    --wrong: #F8BCBC;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #6667AB;
+    font-family: 'Radio Canada', sans-serif;
+    color: #00171F;
+    font-size: 18px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+main {
+    width: 700px;
+    min-height: 550px;
+    background-color: #f9f9f9;
+    padding: 40px 75px;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: inset 0px 0px 0px 10px #BDE4A7, 0px 5px 5px rgba(0, 0, 0, 0.3);
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.question {
+    padding: 15px 0;
 }
 
-.App-link {
-  color: #61dafb;
+h1 {
+    font-size: 40px;
+    margin-bottom: 10px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+h2 {
+    font-size: 14px;
+    margin-bottom: 10px;
+    margin-top: 0px;
+}
+
+.button {
+    font-family: 'Radio Canada', sans-serif;
+    font-size: 12px;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.choice-button {
+    border: 1px solid #6667AB;
+    background-color: #f9f9f9;
+    margin-right: 12px;
+    padding: 5px;
+    min-width: 65px;
+}
+
+.choice-button:hover:enabled, .choice-button.selected {
+    background-color: #6667AB;
+    color: #f9f9f9
+}
+
+.choice-button[disabled] {
+    cursor: default;
+}
+
+
+hr {
+    border: none;
+    height: 1px;
+    background-color: #6667AB;
+    opacity: 0.2;
+    margin: 0px;
+}
+
+.answer-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    font-weight: 700;
+    margin-top: 15px;
+}
+
+.check-answers {
+    width: 150px;
+    background-color: #6667AB;
+    color: white;
+    padding: 10px 20px;
+    border: 1px solid #6667AB;
+    margin: 0;
+}
+
+.check-answers:hover {
+    background-color: #f9f9f9;
+    color: #6667AB;
+    padding: 10px 20px;
+}
+
+.correct {
+    background-color: var(--correct);
+    border: 1px solid var(--correct);
+}
+
+.correct:disabled {
+    opacity: 1;
+    color: #00171F;
+}
+
+.wrong {
+    background-color: var(--wrong);
+    border: 1px solid var(--wrong);
+}
+
+.splash {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.start-game {
+    width: 200px;
+    height: 50px;
+    background-color: #6667AB;
+    color: white;
+    padding: 10px 20px;
+    border: 1px solid #6667AB;
+    font-size: 16px;
 }
