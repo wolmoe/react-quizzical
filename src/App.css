@@ -1,7 +1,12 @@
 :root {
     --primary: #6667AB;
+    --secondary: #BDE4A7;
     --correct: #BDE4A7;
     --wrong: #F8BCBC;
+}
+
+html {
+    height: 100%;
 }
 
 body {
@@ -10,15 +15,25 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-    background-color: #6667AB;
+    min-height: 100%;
+    background-color: var(--primary);
     font-family: 'Radio Canada', sans-serif;
     color: #00171F;
-    font-size: 18px;
+    font-size: 1.1rem;
+    padding: 30px 20px;
+}
+
+#root {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100%;
 }
 
 main {
-    width: 700px;
+    width: 60%;
+    max-width: 700px;
     min-height: 550px;
     background-color: #f9f9f9;
     padding: 40px 75px;
@@ -27,7 +42,8 @@ main {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    box-shadow: inset 0px 0px 0px 10px #BDE4A7, 0px 5px 5px rgba(0, 0, 0, 0.3);
+    margin: auto;
+    box-shadow: inset 0px 0px 0px 10px var(--secondary), 0px 5px 5px rgba(0, 0, 0, 0.3);
 }
 
 .question {
@@ -54,15 +70,16 @@ h2 {
 }
 
 .choice-button {
-    border: 1px solid #6667AB;
+    border: 1px solid var(--primary);
     background-color: #f9f9f9;
     margin-right: 12px;
     padding: 5px;
     min-width: 65px;
+    width: 100%;
 }
 
 .choice-button:hover:enabled, .choice-button.selected {
-    background-color: #6667AB;
+    background-color: var(--primary);
     color: #f9f9f9
 }
 
@@ -70,17 +87,17 @@ h2 {
     cursor: default;
 }
 
-
 hr {
     border: none;
     height: 1px;
-    background-color: #6667AB;
+    background-color: var(--primary);
     opacity: 0.2;
     margin: 0px;
 }
 
 .answer-container {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 30px;
@@ -90,10 +107,10 @@ hr {
 
 .check-answers {
     width: 150px;
-    background-color: #6667AB;
+    background-color: var(--primary);
     color: white;
     padding: 10px 20px;
-    border: 1px solid #6667AB;
+    border: 1px solid var(--primary);
     margin: 0;
 }
 
@@ -126,12 +143,30 @@ hr {
     align-items: center;
 }
 
+.splash p {
+    text-align: center;
+}
+
 .start-game {
     width: 200px;
     height: 50px;
-    background-color: #6667AB;
+    background-color: var(--primary);
     color: white;
     padding: 10px 20px;
-    border: 1px solid #6667AB;
+    border: 1px solid var(--primary);
     font-size: 16px;
+}
+
+@media screen and (min-width: 768px) {
+    main {
+        width: 700px;
+    }
+
+    .choice-button {
+        width: auto;
+    }
+
+    .answer-container {
+        flex-direction: row;
+    }
 }
