@@ -80,7 +80,8 @@ h2 {
     width: 100%;
 }
 
-.choice-button:hover:enabled, .choice-button.selected {
+.choice-button:hover:enabled,
+.choice-button.selected {
     background-color: var(--primary);
     color: #f9f9f9
 }
@@ -165,8 +166,14 @@ hr {
         width: 700px;
     }
 
+    h2 {
+        text-align: left;
+        font-size: 1rem;
+    }
+
     .choice-button {
         width: auto;
+        font-size: 0.8rem
     }
 
     .answer-container {

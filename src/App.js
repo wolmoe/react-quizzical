@@ -12,7 +12,7 @@ const App = () => {
   const [correctAnswers, setCorrectAnswers] = useState(0)
 
   const getQuestions = async () => {
-    const res = await fetch('https://opentdb.com/api.php?amount=5&type=multiple')
+    const res = await fetch(`https://opentdb.com/api.php?amount=5&type=multiple`)
     const data = await res.json()
     setQuestions(data.results.map(item => ({
       category: decode(item.category),
