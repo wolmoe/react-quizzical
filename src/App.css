@@ -16,6 +16,7 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 100%;
+    width: 100%;
     background-color: var(--primary);
     font-family: 'Radio Canada', sans-serif;
     color: #00171F;
@@ -32,7 +33,7 @@ body {
 }
 
 main {
-    width: 60%;
+    width: 80%;
     max-width: 700px;
     min-height: 550px;
     background-color: #f9f9f9;
@@ -56,14 +57,15 @@ h1 {
 }
 
 h2 {
-    font-size: 14px;
+    font-size: 1.1rem;
+    text-align: center;
     margin-bottom: 10px;
     margin-top: 0px;
 }
 
 .button {
     font-family: 'Radio Canada', sans-serif;
-    font-size: 12px;
+    font-size: 1rem;
     border-radius: 10px;
     cursor: pointer;
     margin-top: 10px;
@@ -106,12 +108,13 @@ hr {
 }
 
 .check-answers {
-    width: 150px;
+    width: auto;
     background-color: var(--primary);
     color: white;
     padding: 10px 20px;
     border: 1px solid var(--primary);
     margin: 0;
+    font-size: 1rem;
 }
 
 .check-answers:hover {
